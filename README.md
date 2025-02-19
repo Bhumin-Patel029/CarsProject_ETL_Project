@@ -11,7 +11,7 @@ The Medallion Architecture guides the data transformation, where the raw data fl
 3. **Gold Layer** - Analytics-ready data
 
 
-![architecture image](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Architecture.png)
+![architecture](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Architecture.png)
 
 ---
 
@@ -90,7 +90,7 @@ To enhance the efficiency of data transformation, a Databricks notebook has been
 
 SQL tables and procedures are created to facilitate data cleaning and transformations.
 
-![sql procedures](https://github.com/user-attachments/assets/abea55b8-9a30-48f4-b633-c200d312fcbc)
+![sql editor](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/SQL_Editor.png)
 
 ### **Azure Resource Group**
 
