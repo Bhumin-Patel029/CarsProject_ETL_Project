@@ -11,7 +11,7 @@ The Medallion Architecture guides the data transformation, where the raw data fl
 3. **Gold Layer** - Analytics-ready data
 
 
-![architecture image](https://github.com/user-attachments/assets/4fe90069-f8e9-4658-abcf-1e0264518172)
+![architecture image](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Architecture.png)
 
 ---
 
@@ -61,19 +61,30 @@ The Gold layer is the final output—cleaned and enriched data that can be used 
 
 This pipeline fetches data from GitHub and loads it into the Azure SQL Database.
 
-![ingestion pipeline](https://github.com/user-attachments/assets/55ef7742-7be6-496b-8141-3596286c377d)
+![ingestion pipeline](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Source_Prep_Pipeline.png)
 
 ### **Pipeline 2: Incremental Data Loading**
 
 This pipeline ensures that only new data is appended to the Bronze layer in Azure Data Lake Gen 2.
 
-![incremental loading](https://github.com/user-attachments/assets/4ff1d24b-b6d5-40a3-842f-358552270969)
+![incremental loading](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Incremental_Data_Pipeline.png)
 
 ### **Databricks Workflow: Building the Star Schema**
 
 The raw data is transformed into structured tables with a star schema in Databricks.
 
-![databricks workflow](https://github.com/user-attachments/assets/fa3c1295-5e00-42ce-aedc-d3b47a558f02)
+![databricks workflow](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Data_Model.png)
+
+### **Updated Incremental Data Loading Pipeline**
+
+To enhance the efficiency of data transformation, a Databricks notebook has been integrated with the existing Azure Data Factory (ADF) pipeline. This integration allows ADF to orchestrate the entire data processing workflow seamlessly.
+
+- The Databricks notebook is triggered at the end of the incremental loading process in ADF.
+- Once the data is ingested into the Bronze layer of Azure Data Lake Gen 2, the Databricks notebook processes and moves it to the Silver and Gold layers.
+- This approach ensures that both ADF and Databricks function as a single end-to-end pipeline, automating the entire data ingestion and transformation flow.
+- The notebook handles data cleansing, transformation, and structuring, making the final dataset ready for analytical use
+
+![updated_increm_pipeline](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Updated_Incremental_Loading.png)
 
 ### **SQL Procedures and Data Transformation**
 
@@ -85,7 +96,7 @@ SQL tables and procedures are created to facilitate data cleaning and transforma
 
 Overview of the deployed resources within Azure for this project.
 
-![resource group](https://github.com/user-attachments/assets/d7068f49-eec5-45cc-a891-24b8e9d2da85)
+![resource group](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Resource_Group.png)
 
 ---
 
