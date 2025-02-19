@@ -69,6 +69,14 @@ This pipeline ensures that only new data is appended to the Bronze layer in Azur
 
 ![incremental loading](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Incremental_Data_Pipeline.png)
 
+The expression in the pipeline's expression builder dynamically filters data from source_cars_data based on incremental loading. It selects records where Date_ID falls between the last and current load values, ensuring only new data is processed. A screenshot is provided for better clarity.
+
+![expression_builder](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Copy_Data_Expression_Builder.png)
+
+The stored procedure uses the below expression to retrieve the maximum date from the current load. This ensures that only new records up to the latest available date are processed in the incremental data pipeline.
+
+![expression_builder1](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Stored_Procdedure_Expression_Builder.png)
+
 ### **Databricks Workflow: Building the Star Schema**
 
 The raw data is transformed into structured tables with a star schema in Databricks.
