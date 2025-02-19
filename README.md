@@ -77,6 +77,12 @@ The stored procedure uses the below expression to retrieve the maximum date from
 
 ![expression_builder1](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Stored_Procdedure_Expression_Builder.png)
 
+### **SQL Procedures and Data Transformation**
+
+SQL tables and procedures are created to facilitate data cleaning and transformations.
+
+![sql editor](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/SQL_Editor.png)
+
 ### **Databricks Workflow: Building the Star Schema**
 
 The raw data is transformed into structured tables with a star schema in Databricks.
@@ -94,11 +100,6 @@ To enhance the efficiency of data transformation, a Databricks notebook has been
 
 ![updated_increm_pipeline](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/Updated_Incremental_Loading.png)
 
-### **SQL Procedures and Data Transformation**
-
-SQL tables and procedures are created to facilitate data cleaning and transformations.
-
-![sql editor](https://github.com/Bhumin-Patel029/CarsProject_Images/blob/main/SQL_Editor.png)
 
 ### **Azure Resource Group**
 
